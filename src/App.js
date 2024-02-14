@@ -12,7 +12,6 @@ const App = () => {
       setNotification(payload.notification);
       console.log(payload)
     });
-    console.log(notification);
   }, []);
   useEffect(() => {}, []);
   return (
