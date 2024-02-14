@@ -6,13 +6,15 @@ import { getMessaging, getToken } from "firebase/messaging";
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: "AIzaSyASpBQ3HNwrTN2E_uuaREOh74mwjVIN-k0",
-  authDomain: "note-4f3d6.firebaseapp.com",
-  projectId: "note-4f3d6",
-  storageBucket: "note-4f3d6.appspot.com",
-  messagingSenderId: "820621990963",
-  appId: "1:820621990963:web:820c83b89452bd25eed746",
+  apiKey: "AIzaSyCpZyDMuuWdciJmEsUIxlWf4B2y8Wi_M0A",
+  authDomain: "taha-app-89e5c.firebaseapp.com",
+  projectId: "taha-app-89e5c",
+  storageBucket: "taha-app-89e5c.appspot.com",
+  messagingSenderId: "785396185410",
+  appId: "1:785396185410:web:ea580d83e6ad54da3ef0db",
+  measurementId: "G-HF7RJ64DSR",
 };
+
 //  {
 //   apiKey: "AIzaSyCpZyDMuuWdciJmEsUIxlWf4B2y8Wi_M0A",
 //   authDomain: "taha-app-89e5c.firebaseapp.com",
@@ -33,15 +35,12 @@ export const generateToken = async () => {
   if (premission === "granted") {
     const token = await getToken(messaging, {
       vapidKey:
-        "BBMJUbpGhM1g4AV0RGqLdqaQtb57tVB6hH64KiYbMhfJXOkiPcDfySSUuYpqHiV9QJc2nZ3bP2Uy9yq0cp4Dg7I",
+        "BD2Bk9al7-Yhnct2vvWDF9MUr5h9snZtYT14kX86--3LyQfEL7m4a5T1QPxAjiAcjzXTRFglnucQh-MC2Jhwj2g",
       // taha
       // vapidKey:
       //   "BD2Bk9al7-Yhnct2vvWDF9MUr5h9snZtYT14kX86--3LyQfEL7m4a5T1QPxAjiAcjzXTRFglnucQh-MC2Jhwj2g",
     });
-    localStorage.setItem(
-      "fcm_token",
-      "BBMJUbpGhM1g4AV0RGqLdqaQtb57tVB6hH64KiYbMhfJXOkiPcDfySSUuYpqHiV9QJc2nZ3bP2Uy9yq0cp4Dg7I"
-    );
-    // console.log(token);
+    localStorage.setItem("fcm_token", token);
+    console.log(token);
   }
 };
