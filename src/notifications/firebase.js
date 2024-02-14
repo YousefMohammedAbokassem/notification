@@ -38,7 +38,10 @@ export const generateToken = async () => {
       // vapidKey:
       //   "BD2Bk9al7-Yhnct2vvWDF9MUr5h9snZtYT14kX86--3LyQfEL7m4a5T1QPxAjiAcjzXTRFglnucQh-MC2Jhwj2g",
     });
-    localStorage.setItem(token)
+    localStorage.setItem(
+      "fcm_token",
+      "BBMJUbpGhM1g4AV0RGqLdqaQtb57tVB6hH64KiYbMhfJXOkiPcDfySSUuYpqHiV9QJc2nZ3bP2Uy9yq0cp4Dg7I"
+    );
     // console.log(token);
   }
 };
